@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Example</title>
+    <link rel="stylesheet" href="bookAPI.css">
+</head>
+
+<body>
+    <div class="search-header">
+        <h1><a href="index.html" style="color: #333; font-size:200%;">BookFinder</a></h1> <!-- BookFinder 링크 -->
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="책 제목을 입력하세요" onkeydown="handleSearch(event)">
+        <button onclick="searchBooks()">search</button> <!-- 검색 버튼 -->
+    </div>
+
+    <div id="searchResults" style="display: none;">
+    </div>
+
+    <div id="popupContainer" style="display: none;">
+        <div id="popupContent" class="popup"></div>
+    </div>
+
+    <div id="paginationContainer" class="pagination" style="display: none;">
+        <button id="prevButton" onclick="showPreviousPage()" disabled>이전 페이지</button>
+        <button id="nextButton" onclick="showNextPage()" disabled>다음 페이지</button>
+    </div>
+
+    <div class="quote" id="quoteContainer">
+        <p>"Books are the wings of life"</p> <!-- 인용문 -->
+        <p style="font-size: 80%; margin-left: 16%;">- Michel De Montaigne -</p> <!-- 인용문 저자 -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="bookAPI.js"></script>
+</body>
+
+</html>
